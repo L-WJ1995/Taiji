@@ -1,0 +1,351 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+html, body {
+  height: 100%;
+  width: 100%;
+  padding: 0 2px; }
+
+body > div:nth-of-type(-n + 3) {
+  border: 1px solid;
+  display: flex;
+  flex-wrap: wrap-reverse;
+  min-width: 500px;
+  margin-bottom: 20px; }
+  body > div:nth-of-type(-n + 3) > div {
+    width: 100%;
+    height: 50px;
+    background-image: linear-gradient(to bottom right, red, blue), linear-gradient(to bottom left, white, black), linear-gradient(to right top, white, black), linear-gradient(to left top, blue, red);
+    background-blend-mode: screen;
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 75% 100%, 50% 100%, 25% 100%, 0 100%);
+    transition: .5s .5s ease; }
+  body > div:nth-of-type(-n + 3) > span {
+    display: flex;
+    width: calc(100% / 6);
+    height: 50px;
+    justify-content: center;
+    align-items: center; }
+
+.a span:hover ~ div {
+  transition: .5s ease; }
+.a span:nth-of-type(1):hover ~ div {
+  clip-path: polygon(0 0, 100% 0, 100% 65%, 14.66% 65%, 8.33% 100%, 2% 65%, 0 65%); }
+.a span:nth-of-type(2):hover ~ div {
+  clip-path: polygon(0 0, 100% 0, 100% 65%, 31.32% 65%, 24.99% 100%, 18.66% 65%, 0 65%); }
+.a span:nth-of-type(3):hover ~ div {
+  clip-path: polygon(0 0, 100% 0, 100% 65%, 47.98% 65%, 41.65% 100%, 35.32% 65%, 0 65%); }
+.a span:nth-of-type(4):hover ~ div {
+  clip-path: polygon(0 0, 100% 0, 100% 65%, 64.64% 65%, 58.31% 100%, 51.98% 65%, 0 65%); }
+.a span:nth-of-type(5):hover ~ div {
+  clip-path: polygon(0 0, 100% 0, 100% 65%, 81.3% 65%, 74.97% 100%, 68.64% 65%, 0 65%); }
+.a span:nth-of-type(6):hover ~ div {
+  clip-path: polygon(0 0, 100% 0, 100% 65%, 97.96% 65%, 91.63% 100%, 85.3% 65%, 0 65%); }
+
+.b span:hover ~ div {
+  transition: .5s ease; }
+.b span:nth-of-type(1):hover ~ div {
+  clip-path: polygon(0 0, 100% 0, 100% 65%, 2% 65%, 8.33% 100%, 14.66% 65%, 0 65%); }
+.b span:nth-of-type(2):hover ~ div {
+  clip-path: polygon(0 0, 100% 0, 100% 65%, 31.32% 65%, 24.99% 100%, 18.66% 65%, 0 65%); }
+.b span:nth-of-type(3):hover ~ div {
+  clip-path: polygon(0 0, 100% 0, 100% 65%, 35.32% 65%, 41.65% 100%, 47.98% 65%, 0 65%); }
+.b span:nth-of-type(4):hover ~ div {
+  clip-path: polygon(0 0, 100% 0, 100% 65%, 64.64% 65%, 58.31% 100%, 51.98% 65%, 0 65%); }
+.b span:nth-of-type(5):hover ~ div {
+  clip-path: polygon(0 0, 100% 0, 100% 65%, 68.64% 65%, 74.97% 100%, 81.3% 65%, 0 65%); }
+.b span:nth-of-type(6):hover ~ div {
+  clip-path: polygon(0 0, 100% 0, 100% 65%, 97.96% 65%, 91.63% 100%, 85.3% 65%, 0 65%); }
+
+.c span:nth-of-type(1) {
+  background-image: linear-gradient(to right, white 10%, #ff5050); }
+.c span:nth-of-type(2) {
+  background-image: linear-gradient(to right, #ff5050, #8050ff); }
+.c span:nth-of-type(3) {
+  background-image: linear-gradient(to right, #8050ff, #aaaa64); }
+.c span:nth-of-type(4) {
+  background-image: linear-gradient(to right, #aaaa64, #ffff3c); }
+.c span:nth-of-type(5) {
+  background-image: linear-gradient(to right, #ffff3c, #80ffff); }
+.c span:nth-of-type(6) {
+  background-image: linear-gradient(to right, #80ffff 80%, white); }
+.c span {
+  clip-path: circle(22px at 50% 50%);
+  transition: 1.5s ease; }
+  .c span:hover {
+    clip-path: circle(500px at 50% 50%); }
+
+.d {
+  display: flex;
+  outline: none;
+  position: relative;
+  min-width: 0;
+  width: 30px;
+  overflow: hidden;
+  height: 100px;
+  text-align: center;
+  line-height: 45px;
+  border: 5px solid;
+  border-radius: 50px;
+  margin: 0 0 0 50px;
+  transition: 1s 0s,font-size 0s 1s; }
+  .d:before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 15px;
+    margin: -10px 0 0 -7.5px;
+    background-color: black;
+    top: 50%;
+    left: 55%;
+    z-index: 0;
+    clip-path: polygon(0 0, 100% 50%, 0 100%, 0 100%); }
+  .d span {
+    visibility: hidden;
+    display: block;
+    position: absolute;
+    width: 173.205px;
+    height: 150px;
+    margin-left: -86.6025px;
+    left: 50%;
+    top: 0;
+    font-size: 18px;
+    line-height: 150px;
+    background-color: transparent;
+    clip-path: polygon(0 0, 50% 100%, 100% 0);
+    transform-origin: 50% 100%; }
+    .d span:nth-of-type(1) {
+      transform: rotate(0deg); }
+    .d span:nth-of-type(2) {
+      transform: rotate(60deg); }
+    .d span:nth-of-type(3) {
+      transform: rotate(120deg); }
+    .d span:nth-of-type(4) {
+      transform: rotate(180deg); }
+    .d span:nth-of-type(5) {
+      transform: rotate(240deg); }
+    .d span:nth-of-type(6) {
+      transform: rotate(300deg); }
+    .d span:nth-of-type(7) {
+      pointer-events: none;
+      display: block;
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      margin: -10px 0 0 -10px;
+      left: 50%;
+      top: 50%;
+      background-color: black;
+      clip-path: none;
+      border-radius: 10px;
+      transition: background-color 0s .3s;
+      z-index: 2; }
+      .d span:nth-of-type(7):before {
+        content: "";
+        pointer-events: none;
+        position: absolute;
+        width: 10px;
+        height: 5px;
+        margin: -2.5px 0 0 0;
+        border-radius: 10px;
+        background-color: black;
+        top: 50%;
+        left: 50%;
+        transform-origin: 0 50%;
+        transition: transform 0s 0s,width 0s,background-color 0s .3s; }
+    .d span:hover ~ span:nth-of-type(7) {
+      visibility: hidden; }
+    .d span:nth-of-type(1):hover {
+      background-color: rgba(0, 0, 0, 0.3);
+      transition: 1s; }
+      .d span:nth-of-type(1):hover ~ span:nth-of-type(7) {
+        visibility: visible;
+        background-color: white;
+        transition: background-color 0s .3s; }
+        .d span:nth-of-type(1):hover ~ span:nth-of-type(7):before {
+          width: 100px;
+          background-color: white;
+          transform: rotate(-90deg);
+          transition: transform 0s 0s,width 1s,background-color 0s .3s; }
+    .d span:nth-of-type(2):hover {
+      background-color: rgba(0, 0, 0, 0.3);
+      transition: 1s; }
+      .d span:nth-of-type(2):hover ~ span:nth-of-type(7) {
+        visibility: visible;
+        background-color: white;
+        transition: background-color 0s .3s; }
+        .d span:nth-of-type(2):hover ~ span:nth-of-type(7):before {
+          width: 100px;
+          background-color: white;
+          transform: rotate(-30deg);
+          transition: transform 0s 0s,width 1s,background-color 0s .3s; }
+    .d span:nth-of-type(3):hover {
+      background-color: rgba(0, 0, 0, 0.3);
+      transition: 1s; }
+      .d span:nth-of-type(3):hover ~ span:nth-of-type(7) {
+        visibility: visible;
+        background-color: white;
+        transition: background-color 0s .3s; }
+        .d span:nth-of-type(3):hover ~ span:nth-of-type(7):before {
+          width: 100px;
+          background-color: white;
+          transform: rotate(30deg);
+          transition: transform 0s 0s,width 1s,background-color 0s .3s; }
+    .d span:nth-of-type(4):hover {
+      background-color: rgba(0, 0, 0, 0.3);
+      transition: 1s; }
+      .d span:nth-of-type(4):hover ~ span:nth-of-type(7) {
+        visibility: visible;
+        background-color: white;
+        transition: background-color 0s .3s; }
+        .d span:nth-of-type(4):hover ~ span:nth-of-type(7):before {
+          width: 100px;
+          background-color: white;
+          transform: rotate(90deg);
+          transition: transform 0s 0s,width 1s,background-color 0s .3s; }
+    .d span:nth-of-type(5):hover {
+      background-color: rgba(0, 0, 0, 0.3);
+      transition: 1s; }
+      .d span:nth-of-type(5):hover ~ span:nth-of-type(7) {
+        visibility: visible;
+        background-color: white;
+        transition: background-color 0s .3s; }
+        .d span:nth-of-type(5):hover ~ span:nth-of-type(7):before {
+          width: 100px;
+          background-color: white;
+          transform: rotate(150deg);
+          transition: transform 0s 0s,width 1s,background-color 0s .3s; }
+    .d span:nth-of-type(6):hover {
+      background-color: rgba(0, 0, 0, 0.3);
+      transition: 1s; }
+      .d span:nth-of-type(6):hover ~ span:nth-of-type(7) {
+        visibility: visible;
+        background-color: white;
+        transition: background-color 0s .3s; }
+        .d span:nth-of-type(6):hover ~ span:nth-of-type(7):before {
+          width: 100px;
+          background-color: white;
+          transform: rotate(210deg);
+          transition: transform 0s 0s,width 1s,background-color 0s .3s; }
+    .d span:nth-of-type(1):hover, .d span:nth-of-type(2):hover, .d span:nth-of-type(6):hover {
+      line-height: 70px; }
+    .d span:nth-of-type(3):hover, .d span:nth-of-type(4):hover, .d span:nth-of-type(5):hover {
+      line-height: 85px; }
+  .d > div {
+    overflow: hidden;
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    display: block;
+    visibility: hidden;
+    height: 100%;
+    width: 50%;
+    top: 0;
+    clip-path: none;
+    background-image: none;
+    z-index: 2;
+    transition: visibility 0s .5s linear,opacity 0.5s linear; }
+    .d > div:nth-of-type(1) {
+      left: 0%;
+      background-color: black; }
+      .d > div:nth-of-type(1)::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 50%;
+        background-color: white;
+        top: 0;
+        right: -50%;
+        border-radius: 50%; }
+      .d > div:nth-of-type(1):after {
+        content: "";
+        position: absolute;
+        width: 25%;
+        height: 12.5%;
+        background-color: black;
+        top: 56.25px;
+        right: -12.5%;
+        border-radius: 50%; }
+      .d > div:nth-of-type(1) > div {
+        position: absolute;
+        width: 25%;
+        height: 12.5%;
+        background-color: white;
+        bottom: 56.25px;
+        right: -12.5%;
+        border-radius: 50%; }
+    .d > div:nth-of-type(2) {
+      left: 50%;
+      background-color: white; }
+      .d > div:nth-of-type(2):before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 50%;
+        background-color: black;
+        bottom: 0;
+        left: -50%;
+        border-radius: 50%; }
+      .d > div:nth-of-type(2):after {
+        content: "";
+        position: absolute;
+        width: 25%;
+        height: 12.5%;
+        background-color: white;
+        bottom: 56.25px;
+        left: -12.5%;
+        border-radius: 50%; }
+      .d > div:nth-of-type(2) > div {
+        position: absolute;
+        width: 25%;
+        height: 12.5%;
+        background-color: black;
+        top: 56.25px;
+        left: -12.5%;
+        border-radius: 50%; }
+  .d:hover {
+    width: 300px;
+    height: 300px;
+    border-radius: 150px;
+    font-size: 0;
+    margin: -10px 0 0 10px;
+    color: white;
+    transition: 1s,font-size 0s;
+    background-image: url(http://dynamic-image.yesky.com/600x-/uploadImages/2013/219/L27JF7SBK0ZD.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: a 2s linear infinite; }
+    .d:hover:before {
+      display: block;
+      width: 20px;
+      height: 20px;
+      border: 5px solid;
+      border-radius: 50px;
+      margin: -15px 0 0 -15px;
+      background-color: white;
+      top: 50%;
+      left: 50%;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      transition: 0s,font-size 0s;
+      z-index: 1; }
+    .d:hover span, .d:hover div {
+      visibility: visible;
+      opacity: 1;
+      transition: visibility 0s 0s, opacity .5s; }
+    .d:hover:focus {
+      animation: 0s; }
+      .d:hover:focus > div:nth-of-type(1) {
+        left: -100%;
+        transition: left 3s; }
+      .d:hover:focus > div:nth-of-type(2) {
+        left: 150%;
+        transition: left 3s; }
+
+@keyframes a {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(-360deg); } }
+
+/*# sourceMappingURL=Taiji.css.map */
